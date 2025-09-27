@@ -1,2 +1,2 @@
 # C
-Everything related to the C language
+Everything I know about the C language.
