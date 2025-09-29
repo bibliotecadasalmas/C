@@ -1,11 +1,12 @@
 #include <stdio.h>
 
 int main() {
-    
+    // Área para definição das variáveis para armazenar as propriedades das cidades
     char estado1, estado2, codigo1[4], codigo2[4], cidade1[50], cidade2[50];
     int populacao1, populacao2, turismo1, turismo2;
-    float area1, area2, pib1, pib2;
+    float area1, area2, pib1, pib2, densidade1, densidade2, capita1, capita2;
 
+    // Área para entrada de dados
     // Entrada de dados da Carta 1
     printf("Carta 1: \n");
     printf("Estado (uma letra de 'A' a 'H' - representando um dos oito estados): ");
@@ -41,6 +42,13 @@ int main() {
     printf("Número de pontos Turísticos: ");
     scanf("%d", &turismo2);
 
+    // Cálculo de Densidade Populacional e PIB per Capita
+    densidade1 = populacao1 / area1;
+    densidade2 = populacao2 / area2;
+    capita1 = pib1 / populacao1;
+    capita2 = pib2 / populacao2;
+
+    // Área para exibição dos dados da cidade
     // Saída de dados da carta 1
     printf("\n--- Dados da Carta 1 --\n");
     printf("Carta 1: \n");
@@ -49,8 +57,10 @@ int main() {
     printf("Nome da Cidade: %s\n", cidade1);
     printf("População: %d\n", populacao1);
     printf("Área: %.2f km²\n", area1);
-    printf("PIB: %.2f bilhões de reais\n", pib1);
+    printf("PIB: %.2f reais\n", pib1);
     printf("Número de pontos Turísticos: %d\n", turismo1);
+    printf("Densidade Populacional: %.2f hab/km²\n", densidade1);
+    printf("PIB per Capita: %.2f reais\n", capita1);
 
     // Saída de dados da carta 2
     printf("\n--- Dados da Carta 2 --\n");
@@ -60,10 +70,10 @@ int main() {
     printf("Nome da Cidade: %s\n", cidade2);
     printf("População: %d\n", populacao2);
     printf("Área: %.2f km²\n", area2);
-    printf("PIB: %.2f bilhões de reais\n", pib2);
-    printf("Número de pontos Turísticos: %d", turismo2);
-
-    getchar();
+    printf("PIB: %.2f reais\n", pib2);
+    printf("Número de pontos Turísticos: %d\n", turismo2);
+    printf("Densidade Populacional: %.2f hab/km²\n", densidade2);
+    printf("PIB per Capita: %.2f reais\n", capita2);
 
     return 0; 
 }
